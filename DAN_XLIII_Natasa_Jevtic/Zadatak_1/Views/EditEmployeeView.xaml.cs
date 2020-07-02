@@ -15,4 +15,5 @@ namespace Zadatak_1.Views
             this.DataContext = new EditEmployeeViewModel(this, employeeToEdit);
         }
     }
+}
 
