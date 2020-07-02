@@ -1,6 +1,7 @@
 ﻿using System.Windows.Input;
 using Zadatak_1.Commands;
 using Zadatak_1.Models;
+using Zadatak_1.Views;
 
 namespace Zadatak_1.ViewModels
 {
@@ -67,7 +68,8 @@ namespace Zadatak_1.ViewModels
         {
             if (Username == "WPFadmin" && Password == "WPFadmin")
             {
-                
+                AdminView admin = new AdminView();
+                admin.ShowDialog();
             }
             else if (employees.FindEmployee(Username, Password) != null)
             {
