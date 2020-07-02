@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadatak_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Logging in" MinHeight="200" MinWidth="270" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="6"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="6"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="6"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Grid.Row="1" Content="Username:"/>
+        <Label Grid.Column="1" Grid.Row="3" Content="Password:"/>
+
+        <TextBox Grid.Column="3" Grid.Row="1" Text="{Binding Username}"/>
+        <TextBox Grid.Column="3" Grid.Row="3" Text="{Binding Password}"/>
+
+        <Button Grid.Column="3" Grid.Row="5" Content="LogIn" Command="{Binding LogIn}" Width="130" HorizontalAlignment="Right"/>
+
     </Grid>
 </Window>
